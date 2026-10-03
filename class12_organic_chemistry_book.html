@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12 Organic Chemistry | Reaction Book</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#667085;--primary:#6d28d9;--border:#e2e8f0;--soft:#f5f3ff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+header{background:linear-gradient(135deg,#29145c,#6d28d9,#2563eb);color:#fff;padding:35px 18px;text-align:center}
+header h1{font-size:30px;margin-bottom:8px}.header-buttons{margin-top:18px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.header-buttons button,.theme{border:0;background:#ffffff22;color:#fff;padding:10px 16px;border-radius:20px;cursor:pointer}
+.container{width:min(1150px,94%);margin:auto}.search-box{margin:20px 0}
+#search{width:100%;padding:15px 18px;border:1px solid var(--border);border-radius:14px;font-size:16px;outline:none}
+.chapter-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:20px}
+.chapter-menu button,.level-buttons button{border:1px solid var(--border);background:var(--card);color:var(--primary);padding:13px 8px;border-radius:12px;font-weight:bold;cursor:pointer}
+.chapter-menu button.active,.level-buttons button.active{background:var(--primary);color:#fff}
+.book{background:var(--card);border-radius:20px;padding:25px;box-shadow:0 8px 30px #0000000d}
+.chapter{display:none}.chapter.active{display:block}.chapter-title{color:var(--primary);font-size:29px}.subtitle{color:var(--muted);margin-bottom:20px}
+.level-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.level-buttons button{padding:9px 18px;border-radius:25px}
+.level{display:none}.level.active{display:block}
+.topic{background:var(--soft);border-left:5px solid var(--primary);border-radius:12px;padding:20px;margin:18px 0}
+.topic h3{color:var(--primary);margin-bottom:8px}.reaction-card{background:#eff6ff;border:1px solid #bfdbfe;border-radius:15px;padding:18px;margin:15px 0}
+.reaction-card h4{color:#1d4ed8}.reaction-line,.mechanism{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:18px 0}
+.molecule,.mechanism-step{background:#fff;border:1px solid #cbd5e1;border-radius:12px;padding:12px 20px;text-align:center;font-family:"Courier New",monospace;font-size:18px;font-weight:bold}
+.arrow{font-size:30px;color:var(--primary);font-weight:bold}.reagent{text-align:center;color:#dc2626;font-weight:bold}
+.structure-box{background:#fff;border:1px dashed #94a3b8;border-radius:14px;padding:15px;margin:15px 0;overflow:auto;text-align:center}
+svg{max-width:100%;height:auto}.note{background:#fff7ed;border-left:5px solid #ea580c;padding:13px;border-radius:8px;margin:12px 0}
+.tip{background:#ecfdf5;border-left:5px solid #059669;padding:13px;border-radius:8px;margin:12px 0}
+.formula{background:#111827;color:#f9fafb;padding:16px;border-radius:12px;margin:12px 0;font-family:"Courier New",monospace;overflow:auto}
+.compare{width:100%;border-collapse:collapse;background:#fff}.compare th,.compare td{border:1px solid var(--border);padding:11px;text-align:left}.compare th{background:#ede9fe;color:#4c1d95}
+.mechanism-step{border:2px solid #8b5cf6;min-width:135px}.mcq{background:#fff;border:1px solid var(--border);padding:16px;border-radius:12px;margin:12px 0}.mcq button{display:block;width:100%;text-align:left;border:1px solid var(--border);background:#f8fafc;padding:9px;margin:6px 0;border-radius:8px;cursor:pointer}.answer{display:none;color:#059669;font-weight:bold;margin-top:8px}
+footer{text-align:center;padding:35px 15px;color:var(--muted)}.theme{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;background:var(--primary);font-size:22px;z-index:50}
+body.dark{--bg:#0f172a;--card:#1e293b;--text:#e5e7eb;--muted:#cbd5e1;--border:#334155;--soft:#172033}
+.dark #search,.dark .chapter-menu button,.dark .level-buttons button,.dark .molecule,.dark .structure-box,.dark .mechanism-step,.dark .mcq,.dark .compare{background:#1e293b;color:#e5e7eb}
+.dark .reaction-card{background:#172554}.dark .compare th{background:#312e81;color:#fff}
+@media(max-width:600px){header h1{font-size:23px}.book{padding:15px}.chapter-title{font-size:23px}.reaction-line,.mechanism{flex-direction:column}.arrow{transform:rotate(90deg)}}
+@media print{header,.search-box,.chapter-menu,.level-buttons,.theme,footer{display:none}.chapter{display:block!important}.book{box-shadow:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>🧪 Class 12 Organic Chemistry</h1>
+<p>Complete Reaction Book • Basic → Advanced</p>
+<div class="header-buttons"><button onclick="window.print()">🖨️ Print / Save PDF</button><button onclick="scrollToTop()">⬆️ Top</button></div>
+</header>
+
+<div class="container">
+<div class="search-box"><input id="search" type="text" placeholder="🔎 Search: Aldol, SN1, alcohol, amine, oxidation..."></div>
+
+<div class="chapter-menu">
+<button class="active" onclick="showChapter(1,this)">1. Haloalkanes</button>
+<button onclick="showChapter(2,this)">2. Alcohols</button>
+<button onclick="showChapter(3,this)">3. Carbonyl</button>
+<button onclick="showChapter(4,this)">4. Amines</button>
+<button onclick="showChapter(5,this)">5. Biomolecules</button>
+<button onclick="showChapter(6,this)">6. Polymers</button>
+<button onclick="showChapter(7,this)">7. Everyday Chemistry</button>
+</div>
+
+<div class="book">
+
+<section class="chapter active" id="chapter1">
+<h2 class="chapter-title">Chapter 1 — Haloalkanes & Haloarenes</h2><p class="subtitle">Alkyl halides • Nucleophilic substitution • Elimination</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c1basic')">Basic</button><button onclick="level(this,'c1mid')">Intermediate</button><button onclick="level(this,'c1adv')">Advanced</button></div>
+<div class="level active" id="c1basic">
+<div class="topic"><h3>General Structure</h3><div class="structure-box"><div class="molecule">R — X</div></div><p>X = F, Cl, Br or I</p></div>
+<div class="reaction-card"><h4>Preparation from Alcohol</h4><div class="reaction-line"><div class="molecule">R—OH</div><div class="arrow">→</div><div class="molecule">R—Cl</div></div><div class="reagent">HCl / ZnCl₂</div></div>
+<div class="reaction-card"><h4>Wurtz Reaction</h4><div class="reaction-line"><div class="molecule">2 R—X</div><div class="arrow">→</div><div class="molecule">R—R</div></div><div class="reagent">2 Na / dry ether</div></div>
+</div>
+<div class="level" id="c1mid">
+<div class="topic"><h3>SN1 Mechanism</h3><div class="mechanism"><div class="mechanism-step">R—X<br>Substrate</div><div class="arrow">→</div><div class="mechanism-step">R⁺ + X⁻<br>Carbocation</div><div class="arrow">→</div><div class="mechanism-step">R—Nu<br>Product</div></div><div class="note">SN1 proceeds through a carbocation intermediate.</div></div>
+<div class="topic"><h3>SN2 Mechanism</h3><div class="mechanism"><div class="mechanism-step">Nu⁻</div><div class="arrow">→</div><div class="mechanism-step">R—X</div><div class="arrow">→</div><div class="mechanism-step">R—Nu + X⁻</div></div></div>
+</div>
+<div class="level" id="c1adv">
+<div class="topic"><h3>SN1 vs SN2</h3><table class="compare"><tr><th>SN1</th><th>SN2</th></tr><tr><td>Two-step</td><td>One-step</td></tr><tr><td>Carbocation intermediate</td><td>No carbocation</td></tr><tr><td>First-order kinetics</td><td>Second-order kinetics</td></tr><tr><td>Rearrangement possible</td><td>No rearrangement</td></tr></table></div>
+<div class="reaction-card"><h4>Dehydrohalogenation</h4><div class="reaction-line"><div class="molecule">R—CH₂—CH₂—X</div><div class="arrow">→</div><div class="molecule">R—CH=CH₂</div></div><div class="reagent">Alcoholic KOH + heat</div></div>
+</div>
+</section>
+
+<section class="chapter" id="chapter2">
+<h2 class="chapter-title">Chapter 2 — Alcohols, Phenols & Ethers</h2><p class="subtitle">Oxidation • Dehydration • Esterification • Ether reactions</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c2basic')">Basic</button><button onclick="level(this,'c2mid')">Intermediate</button><button onclick="level(this,'c2adv')">Advanced</button></div>
+<div class="level active" id="c2basic">
+<div class="topic"><h3>Alcohol Functional Group</h3><div class="structure-box"><div class="molecule">R—OH</div></div></div>
+<div class="reaction-card"><h4>Oxidation of Primary Alcohol</h4><div class="reaction-line"><div class="molecule">R—CH₂OH</div><div class="arrow">→</div><div class="molecule">R—CHO</div><div class="arrow">→</div><div class="molecule">R—COOH</div></div><div class="reagent">[O] / suitable oxidising conditions</div></div>
+<div class="reaction-card"><h4>Esterification</h4><div class="reaction-line"><div class="molecule">R—COOH</div><div class="molecule">+</div><div class="molecule">R'—OH</div><div class="arrow">→</div><div class="molecule">R—COOR'</div></div><div class="reagent">H⁺ / heat</div></div>
+</div>
+<div class="level" id="c2mid">
+<div class="topic"><h3>Williamson Ether Synthesis</h3><div class="reaction-line"><div class="molecule">R—O⁻Na⁺</div><div class="molecule">+</div><div class="molecule">R'—X</div><div class="arrow">→</div><div class="molecule">R—O—R'</div></div></div>
+<div class="topic"><h3>Phenol + Bromine Water</h3><div class="reaction-line"><div class="molecule">C₆H₅OH</div><div class="arrow">→</div><div class="molecule">2,4,6-Tribromophenol</div></div><div class="reagent">Br₂ / H₂O</div></div>
+</div>
+<div class="level" id="c2adv">
+<div class="topic"><h3>Acid-Catalysed Dehydration</h3><div class="mechanism"><div class="mechanism-step">Alcohol<br>R—CH₂—CH₂OH</div><div class="arrow">→</div><div class="mechanism-step">Intermediate</div><div class="arrow">→</div><div class="mechanism-step">Alkene<br>R—CH=CH₂</div></div><div class="reagent">Conc. H₂SO₄ / heat</div></div>
+</div>
+</section>
+
+<section class="chapter" id="chapter3">
+<h2 class="chapter-title">Chapter 3 — Aldehydes, Ketones & Carboxylic Acids</h2><p class="subtitle">Carbonyl group • Oxidation • Reduction • Aldol • Cannizzaro</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c3basic')">Basic</button><button onclick="level(this,'c3mid')">Intermediate</button><button onclick="level(this,'c3adv')">Advanced</button></div>
+<div class="level active" id="c3basic">
+<div class="topic"><h3>Aldehyde</h3><div class="structure-box"><div class="molecule">R—CHO</div></div></div>
+<div class="topic"><h3>Ketone</h3><div class="structure-box"><div class="molecule">R—CO—R'</div></div></div>
+<div class="reaction-card"><h4>Oxidation of Aldehyde</h4><div class="reaction-line"><div class="molecule">R—CHO</div><div class="arrow">→</div><div class="molecule">R—COOH</div></div><div class="reagent">[O]</div></div>
+</div>
+<div class="level" id="c3mid">
+<div class="reaction-card"><h4>Tollens' Test</h4><div class="reaction-line"><div class="molecule">Aldehyde</div><div class="arrow">→</div><div class="molecule">Silver Mirror</div></div><div class="reagent">Tollens' reagent</div></div>
+<div class="reaction-card"><h4>Reduction of Aldehyde</h4><div class="reaction-line"><div class="molecule">R—CHO</div><div class="arrow">→</div><div class="molecule">R—CH₂OH</div></div><div class="reagent">H₂ / Ni</div></div>
+</div>
+<div class="level" id="c3adv">
+<div class="reaction-card"><h4>Aldol Reaction</h4><div class="reaction-line"><div class="molecule">2 CH₃CHO</div><div class="arrow">→</div><div class="molecule">CH₃CH(OH)CH₂CHO</div></div><div class="reagent">Dilute NaOH</div></div>
+<div class="reaction-card"><h4>Cannizzaro Reaction</h4><div class="reaction-line"><div class="molecule">2 RCHO</div><div class="arrow">→</div><div class="molecule">RCH₂OH + RCOO⁻</div></div><div class="reagent">Concentrated base</div></div>
+</div>
+</section>
+
+<section class="chapter" id="chapter4">
+<h2 class="chapter-title">Chapter 4 — Amines</h2><p class="subtitle">Primary • Secondary • Tertiary amines • Diazotisation • Diazonium reactions</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c4basic')">Basic</button><button onclick="level(this,'c4mid')">Intermediate</button><button onclick="level(this,'c4adv')">Advanced</button></div>
+<div class="level active" id="c4basic">
+<div class="topic"><h3>Primary Amine</h3><div class="structure-box"><div class="molecule">R—NH₂</div></div></div>
+<div class="topic"><h3>Secondary Amine</h3><div class="structure-box"><div class="molecule">R—NH—R'</div></div></div>
+<div class="topic"><h3>Tertiary Amine</h3><div class="structure-box"><div class="molecule">R₃N</div></div></div>
+</div>
+<div class="level" id="c4mid">
+<div class="reaction-card"><h4>Hoffmann Bromamide Reaction</h4><div class="reaction-line"><div class="molecule">R—CONH₂</div><div class="arrow">→</div><div class="molecule">R—NH₂</div></div><div class="reagent">Br₂ / NaOH</div><div class="note">The product amine has one carbon atom fewer than the original amide.</div></div>
+<div class="reaction-card"><h4>Carbylamine Reaction</h4><div class="reaction-line"><div class="molecule">R—NH₂</div><div class="arrow">→</div><div class="molecule">R—NC</div></div><div class="reagent">CHCl₃ / alcoholic KOH</div></div>
+</div>
+<div class="level" id="c4adv">
+<div class="reaction-card"><h4>Diazotisation</h4><div class="reaction-line"><div class="molecule">Ar—NH₂</div><div class="arrow">→</div><div class="molecule">Ar—N₂⁺Cl⁻</div></div><div class="reagent">NaNO₂ + HCl / 0–5°C</div></div>
+<div class="reaction-card"><h4>Sandmeyer Reaction</h4><div class="reaction-line"><div class="molecule">Ar—N₂⁺Cl⁻</div><div class="arrow">→</div><div class="molecule">Ar—Cl</div></div><div class="reagent">CuCl</div></div>
+</div>
+</section>
+
+<section class="chapter" id="chapter5">
+<h2 class="chapter-title">Chapter 5 — Biomolecules</h2><p class="subtitle">Carbohydrates • Proteins • Amino acids • DNA • RNA</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c5basic')">Basic</button><button onclick="level(this,'c5mid')">Intermediate</button><button onclick="level(this,'c5adv')">Advanced</button></div>
+<div class="level active" id="c5basic">
+<div class="topic"><h3>Glucose</h3><div class="structure-box"><div class="molecule">CHO—(CHOH)₄—CH₂OH</div></div></div>
+<div class="topic"><h3>Amino Acid</h3><div class="structure-box"><div class="molecule">NH₂—CH(R)—COOH</div></div></div>
+</div>
+<div class="level" id="c5mid"><div class="topic"><h3>Peptide Bond</h3><div class="structure-box"><div class="molecule">—CO—NH—</div></div><p>The linkage between amino acid residues in proteins is called a peptide bond.</p></div></div>
+<div class="level" id="c5adv"><div class="topic"><h3>DNA Base Pairing</h3><div class="mechanism"><div class="mechanism-step">Adenine<br>A</div><div class="arrow">↔</div><div class="mechanism-step">Thymine<br>T</div></div><div class="mechanism"><div class="mechanism-step">Guanine<br>G</div><div class="arrow">↔</div><div class="mechanism-step">Cytosine<br>C</div></div></div></div>
+</section>
+
+<section class="chapter" id="chapter6">
+<h2 class="chapter-title">Chapter 6 — Polymers</h2><p class="subtitle">Monomers • Addition polymerisation • Condensation polymerisation</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c6basic')">Basic</button><button onclick="level(this,'c6mid')">Intermediate</button><button onclick="level(this,'c6adv')">Advanced</button></div>
+<div class="level active" id="c6basic">
+<div class="reaction-card"><h4>Polyethylene</h4><div class="reaction-line"><div class="molecule">n CH₂=CH₂</div><div class="arrow">→</div><div class="molecule">—[CH₂—CH₂]ₙ—</div></div></div>
+<div class="reaction-card"><h4>PVC</h4><div class="reaction-line"><div class="molecule">n CH₂=CHCl</div><div class="arrow">→</div><div class="molecule">—[CH₂—CHCl]ₙ—</div></div></div>
+</div>
+<div class="level" id="c6mid"><div class="topic"><h3>Nylon-6,6</h3><div class="reaction-line"><div class="molecule">Diamine</div><div class="molecule">+</div><div class="molecule">Dicarboxylic acid</div><div class="arrow">→</div><div class="molecule">Nylon-6,6</div></div></div></div>
+<div class="level" id="c6adv"><div class="topic"><h3>Thermoplastic vs Thermosetting</h3><table class="compare"><tr><th>Thermoplastic</th><th>Thermosetting</th></tr><tr><td>Can soften on heating</td><td>Strongly cross-linked after setting</td></tr><tr><td>Can often be remoulded</td><td>Cannot normally be remoulded easily</td></tr><tr><td>Example: PVC</td><td>Example: Bakelite</td></tr></table></div></div>
+</section>
+
+<section class="chapter" id="chapter7">
+<h2 class="chapter-title">Chapter 7 — Chemistry in Everyday Life</h2><p class="subtitle">Drugs • Antacids • Analgesics • Antiseptics • Disinfectants</p>
+<div class="level-buttons"><button class="active" onclick="level(this,'c7basic')">Basic</button><button onclick="level(this,'c7mid')">Intermediate</button><button onclick="level(this,'c7adv')">Advanced</button></div>
+<div class="level active" id="c7basic">
+<div class="topic"><h3>Analgesics</h3><div class="reaction-line"><div class="molecule">Pain</div><div class="arrow">→</div><div class="molecule">Analgesic</div><div class="arrow">→</div><div class="molecule">Pain relief</div></div></div>
+<div class="topic"><h3>Antacids</h3><div class="reaction-line"><div class="molecule">Excess HCl</div><div class="arrow">→</div><div class="molecule">Antacid</div><div class="arrow">→</div><div class="molecule">Neutralisation</div></div></div>
+</div>
+<div class="level" id="c7mid"><div class="topic"><h3>Antiseptic vs Disinfectant</h3><table class="compare"><tr><th>Antiseptic</th><th>Disinfectant</th></tr><tr><td>Used on living tissues</td><td>Used mainly on non-living surfaces</td></tr><tr><td>Controls microorganisms</td><td>Controls microorganisms on surfaces</td></tr></table></div></div>
+<div class="level" id="c7adv"><div class="topic"><h3>Quick Revision</h3><div class="formula">Analgesic → Pain relief\nAntacid → Excess stomach acid\nAntiseptic → Living tissue\nDisinfectant → Non-living surface</div></div></div>
+</section>
+
+<div class="topic">
+<h2 style="color:#6d28d9;margin-bottom:12px">⚡ Super Quick Reaction Revision</h2>
+<div class="formula">R—X + Nu⁻ → R—Nu + X⁻
+
+R—OH → R—CHO → R—COOH
+
+R—COOH + R'—OH ⇌ R—COOR' + H₂O
+
+R—CHO + [O] → R—COOH
+
+2 CH₃CHO → Aldol product
+
+R—CONH₂ → R—NH₂
+
+Ar—NH₂ → Ar—N₂⁺Cl⁻
+
+n CH₂=CH₂ → —[CH₂—CH₂]ₙ—</div>
+</div>
+
+<div class="topic">
+<h2 style="color:#6d28d9;margin-bottom:15px">📝 Quick MCQ Practice</h2>
+<div class="mcq"><b>1. SN1 reaction involves which intermediate?</b><button onclick="checkAnswer(this,false)">A. Carbanion</button><button onclick="checkAnswer(this,true)">B. Carbocation</button><button onclick="checkAnswer(this,false)">C. Free radical</button><button onclick="checkAnswer(this,false)">D. Carbene</button><p class="answer">Correct Answer: B — Carbocation</p></div>
+<div class="mcq"><b>2. Functional group of alcohol is:</b><button onclick="checkAnswer(this,false)">A. —COOH</button><button onclick="checkAnswer(this,true)">B. —OH</button><button onclick="checkAnswer(this,false)">C. —CHO</button><button onclick="checkAnswer(this,false)">D. —NH₂</button><p class="answer">Correct Answer: B — —OH</p></div>
+<div class="mcq"><b>3. Tollens' reagent is commonly used for:</b><button onclick="checkAnswer(this,true)">A. Aldehyde test</button><button onclick="checkAnswer(this,false)">B. Alkane test</button><button onclick="checkAnswer(this,false)">C. Ether test</button><button onclick="checkAnswer(this,false)">D. Amine test</button><p class="answer">Correct Answer: A — Aldehyde test</p></div>
+<div class="mcq"><b>4. Diazotisation of aniline is generally carried out at:</b><button onclick="checkAnswer(this,false)">A. 50°C</button><button onclick="checkAnswer(this,true)">B. 0–5°C</button><button onclick="checkAnswer(this,false)">C. 100°C</button><button onclick="checkAnswer(this,false)">D. 200°C</button><p class="answer">Correct Answer: B — 0–5°C</p></div>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>🧪 Class 12 Organic Chemistry Reaction Book</p>
+<p>Basic → Intermediate → Advanced</p>
+</footer>
+
+<button class="theme" onclick="toggleTheme()">🌙</button>
+
+<script>
+function showChapter(number,button){
+document.querySelectorAll(".chapter").forEach(c=>c.classList.remove("active"));
+document.getElementById("chapter"+number).classList.add("active");
+document.querySelectorAll(".chapter-menu button").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+window.scrollTo({top:0,behavior:"smooth"});
+}
+function level(button,id){
+const parent=button.parentElement, chapter=parent.parentElement;
+chapter.querySelectorAll(".level").forEach(x=>x.classList.remove("active"));
+parent.querySelectorAll("button").forEach(x=>x.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+button.classList.add("active");
+}
+function toggleTheme(){
+document.body.classList.toggle("dark");
+document.querySelector(".theme").textContent=document.body.classList.contains("dark")?"☀️":"🌙";
+}
+document.getElementById("search").addEventListener("input",function(){
+const q=this.value.toLowerCase().trim();
+document.querySelectorAll(".topic").forEach(t=>t.style.display=(!q||t.innerText.toLowerCase().includes(q))?"":"none");
+});
+function checkAnswer(button,correct){
+const mcq=button.closest(".mcq");
+mcq.querySelector(".answer").style.display="block";
+button.style.background=correct?"#dcfce7":"#fee2e2";
+}
+function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"});}
+</script>
+</body>
+</html>
